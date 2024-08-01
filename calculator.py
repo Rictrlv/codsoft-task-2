@@ -4,20 +4,20 @@ from tkinter import ttk
 
 def calculation():
     try:
-        expression = entry_field.get()
+        expression = entryfield.get()
         result = eval(expression)
-        result_label.config(text=f"{result}")
+        resultlabel.config(text=f"{result}")
     except Exception as error:
         messagebox.showerror("Error", f"Invalid input: {error}")
 
 def addtoexpression(symbol):
     current_text = entry_field.get()
-    entry_field.delete(0, tk.END)
-    entry_field.insert(0, current_text + str(symbol))
+    entryfield.delete(0, tk.END)
+    entryfield.insert(0, current_text + str(symbol))
 
 def clearinput():
-    entry_field.delete(0, tk.END)
-    result_label.config(text="")
+    entryfield.delete(0, tk.END)
+    resultlabel.config(text="")
 
 def createbutton(text, command, row, col, colspan=1, rowspan=1):
     button = ttk.Button(window, text=text, command=command, style="TButton")
