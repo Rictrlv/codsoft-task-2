@@ -39,28 +39,28 @@ style.configure('TButton', font=('Arial', 14))
 style.map('TButton')
 
 
-create_button("C", clear_input, 2, 0)
-create_button("/", lambda: addtoexpression('/'), 2, 1)
-create_button("*", lambda: addtoexpression('*'), 2, 2)
-create_button("-", lambda: addtoexpression('-'), 2, 3)
+createbutton("C", clear_input, 2, 0)
+createbutton("/", lambda: addtoexpression('/'), 2, 1)
+createbutton("*", lambda: addtoexpression('*'), 2, 2)
+createbutton("-", lambda: addtoexpression('-'), 2, 3)
 
-create_button("7", lambda: addtoexpression(7), 3, 0)
-create_button("8", lambda: addtoexpression(8), 3, 1)
-create_button("9", lambda: addtoexpression(9), 3, 2)
-create_button("+", lambda: addtoexpression('+'), 3, 3)
+createbutton("7", lambda: addtoexpression(7), 3, 0)
+createbutton("8", lambda: addtoexpression(8), 3, 1)
+createbutton("9", lambda: addtoexpression(9), 3, 2)
+createbutton("+", lambda: addtoexpression('+'), 3, 3)
 
-create_button("4", lambda: addtoexpression(4), 4, 0)
-create_button("5", lambda: addtoexpression(5), 4, 1)
-create_button("6", lambda: addtoexpression(6), 4, 2)
+createbutton("4", lambda: addtoexpression(4), 4, 0)
+createbutton("5", lambda: addtoexpression(5), 4, 1)
+createbutton("6", lambda: addtoexpression(6), 4, 2)
 
-create_button("1", lambda: addtoexpression(1), 5, 0)
-create_button("2", lambda: addtoexpression(2), 5, 1)
-create_button("3", lambda: addtoexpression(3), 5, 2)
+createbutton("1", lambda: addtoexpression(1), 5, 0)
+createbutton("2", lambda: addtoexpression(2), 5, 1)
+createbutton("3", lambda: addtoexpression(3), 5, 2)
 
-create_button("0", lambda: addtoexpression(0), 6, 0, colspan=2)
-create_button(".", lambda: addtoexpression('.'), 6, 2)
+createbutton("0", lambda: addtoexpression(0), 6, 0, colspan=2)
+createbutton(".", lambda: addtoexpression('.'), 6, 2)
 
-create_button("=", calculation, 4, 3, rowspan=3)
+createbutton("=", calculation, 4, 3, rowspan=3)
 
 for i in range(4):
     window.columnconfigure(i, weight=1)
