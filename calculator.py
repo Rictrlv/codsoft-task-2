@@ -11,9 +11,9 @@ def calculation():
         messagebox.showerror("Error", f"Invalid input: {error}")
 
 def addtoexpression(symbol):
-    current_text = entry_field.get()
+    currenttext = entryfield.get()
     entryfield.delete(0, tk.END)
-    entryfield.insert(0, current_text + str(symbol))
+    entryfield.insert(0, currenttext + str(symbol))
 
 def clearinput():
     entryfield.delete(0, tk.END)
@@ -39,7 +39,7 @@ style.configure('TButton', font=('Arial', 14))
 style.map('TButton')
 
 
-createbutton("C", clear_input, 2, 0)
+createbutton("C", clearinput, 2, 0)
 createbutton("/", lambda: addtoexpression('/'), 2, 1)
 createbutton("*", lambda: addtoexpression('*'), 2, 2)
 createbutton("-", lambda: addtoexpression('-'), 2, 3)
